@@ -1,0 +1,92 @@
+:root {
+    --neon-green: #00ff9d;
+    --neon-red: #ff3d3d;
+    --glass: rgba(0, 20, 40, 0.6);
+}
+
+body, html { margin: 0; padding: 0; overflow: hidden; background: #000; font-family: 'Courier New', Courier, monospace; }
+
+#game-viewport {
+    width: 100vw;
+    height: 100vh;
+    perspective: 1000px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#world {
+    width: 100%;
+    height: 100%;
+    transform: rotateX(45deg); /* Perspective angle */
+    transform-style: preserve-3d;
+}
+
+#city-canvas {
+    width: 100%;
+    height: 150%; /* Larger to cover background */
+    display: block;
+}
+
+#hud {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    padding: 20px;
+    background: var(--glass);
+    border: 1px solid var(--neon-green);
+    color: var(--neon-green);
+    box-shadow: 0 0 15px rgba(0, 255, 157, 0.3);
+    pointer-events: none;
+    backdrop-filter: blur(5px);
+}
+
+.health-bar-container {
+    width: 200px;
+    height: 10px;
+    background: #111;
+    margin-top: 10px;
+    border: 1px solid #333;
+}
+
+#health-bar {
+    width: 100%;
+    height: 100%;
+    background: var(--neon-green);
+    transition: 0.3s;
+}
+
+#overlay {
+    position: absolute;
+    text-align: center;
+    background: var(--glass);
+    padding: 50px;
+    border: 2px solid var(--neon-green);
+    color: white;
+}
+
+.neon-title {
+    font-size: 4rem;
+    color: white;
+    text-shadow: 0 0 10px var(--neon-green), 0 0 30px var(--neon-green);
+    margin-bottom: 30px;
+}
+
+#start-btn {
+    padding: 15px 50px;
+    font-size: 1.5rem;
+    background: transparent;
+    border: 2px solid var(--neon-green);
+    color: var(--neon-green);
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--neon-green);
+}
+
+#start-btn:hover {
+    background: var(--neon-green);
+    color: black;
+}
+
+.hidden { display: none !important; }
+.controls { margin-top: 20px; opacity: 0.6; }

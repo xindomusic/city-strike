@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Strike 3D</title>
+    <link rel="stylesheet" href="src/ui.css">
+</head>
+<body>
+    <div id="game-viewport">
+        <!-- 3D World Container -->
+        <div id="world">
+            <canvas id="city-canvas"></canvas>
+        </div>
+        
+        <div id="hud">
+            <div class="stat">SCORE: <span id="score">0</span></div>
+            <div class="health-bar-container">
+                <div id="health-bar"></div>
+            </div>
+        </div>
+
+        <div id="overlay">
+            <h1 class="neon-title">CITY STRIKE 3D</h1>
+            <div id="results" class="hidden">
+                <p>MISSION FAILED. SCORE: <span id="final-score">0</span></p>
+            </div>
+            <button id="start-btn">ENGAGE</button>
+            <div class="controls">WASD / Arrows to Fly • Space to Fire</div>
+        </div>
+    </div>
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
